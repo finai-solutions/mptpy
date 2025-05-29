@@ -12,7 +12,7 @@ pip install .
 
 ```python
 import os
-from mpt_client import MPTClient
+from mptpy import MPTClient
 
 # Set your API key before initializing the client
 os.environ["FINAI_API_KEY"] = "your-api-key"
