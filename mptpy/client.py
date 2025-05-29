@@ -46,9 +46,9 @@ class MPTClient:
             "api_key": self.api_key,
             "asset_type": asset_type,
             "start_date": start_date,
-            #"granularity": granularity,
-            #"return_period": return_period,
-            #"market_cap": market_cap,
+            "granularity": granularity,
+            "return_period": return_period,
+            "market_cap": market_cap,
         }
         if end_date:
             payload["end_date"] = end_date
@@ -57,7 +57,7 @@ class MPTClient:
         return self._request("/portfolio", payload)
 
     def post_ultimate(self, asset_type, start_date, end_date=None, granularity="86400", return_period=30,
-                      market_cap="1Billion"):
+                      market_cap="1000000000"):
         """POST /ultimate"""
         payload = {
             "api_key": self.api_key,
@@ -72,7 +72,7 @@ class MPTClient:
         return self._request("/ultimate", payload)
 
     def post_subscribe(self, asset_type, start_date, email, weights, tickers=None, end_date=None, granularity="86400",
-                      return_period=30, market_cap="1Billion"):
+                      return_period=30, market_cap="1000000000"):
         """POST /subscribe"""
         payload = {
             "api_key": self.api_key,
@@ -91,7 +91,7 @@ class MPTClient:
         return self._request("/subscribe", payload)
 
     def post_analyzer(self, asset_type, start_date, ticker, end_date=None, granularity="86400", return_period=30,
-                      market_cap="1Billion"):
+                      market_cap="1000000000"):
         """POST /analyzer"""
         payload = {
             "api_key": self.api_key,

@@ -23,7 +23,7 @@ client = MPTClient("https://finai.solutions/")
 portfolio = client.post_portfolio(
     asset_type="crypto",
     start_date="2024-01-01-00-00",
-    tickers=["BTC", "ETH"]
+    tickers="[BTC, ETH]"
 )
 
 # Ultimate
@@ -38,20 +38,20 @@ subscription = client.post_subscribe(
     start_date="2024-01-01-00-00",
     email="user@example.com",
     weights=["0.5", "0.5"],
-    tickers=["BTC", "ETH"]
+    tickers="[BTC, ETH]"
 )
 
 # Analyzer
 analysis = client.post_analyzer(
     asset_type="stock",
     start_date="2024-01-01-00-00",
-    ticker="AAPL"
+    ticker="COMI"
 )
 
 # Update
 updated_portfolio = client.post_update(
-    tickers=["BTC", "ETH"],
-    actions=["0.2", "-0.2"],
+    tickers="[BTC, ETH]",
+    actions="[0.2, -0.2]",
     portfolio_id="YOUR_PORTFOLIO_ID"
 )
 ```
