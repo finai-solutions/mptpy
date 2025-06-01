@@ -8,5 +8,5 @@ setup(
     description="Python client for mpt server API",
     author="Mohab.M.Metwally",
     author_email="mohab-metwally@riseup.net",
-    url="https://github.com/finai-solutions/mpt",
+    url="https://github.com/finai-solutions/mptpy",
 )
